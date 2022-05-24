@@ -31,6 +31,7 @@ for folder_name, folder_items in file_mappings.items():
 
         except FileExistsError:
             pprint("Sorry a file of this name exists in this folder")
+            pprint(f"Leaving {source} where it is...")
         
         except PermissionError:
             pprint("Hang on a sec...")
