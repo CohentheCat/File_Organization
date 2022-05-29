@@ -1,10 +1,11 @@
 import os
 import collections
 from pprint import pprint
+import PySimpleGUI as sgui
 
 #Selects the folder you want to sort
 folder_to_sort = 'Downloads'
-TARGET_PATH = os.path.join(os.path.expanduser("~"), folder_to_sort)
+TARGET_PATH = sgui.popup_get_folder("Select a Folder")
 
 #Will make folders for each file type in the given directory if one does not exist.
 file_mappings = collections.defaultdict()
